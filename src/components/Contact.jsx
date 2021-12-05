@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { withRouter } from "react-router";
+import { CarritoContext } from "../context/CarritoContext";
 
 const Contact = (props) => {
   const [usuario, setUsuario] = useState("");
@@ -22,7 +23,7 @@ const Contact = (props) => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
-        <h3>Crea una cuenta</h3>
+        <h3>Crea una cuenta - ({context.hola})</h3>
         <label htmlFor="">Usuario:</label>
         <input
           type="text"
